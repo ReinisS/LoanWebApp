@@ -1,0 +1,43 @@
+<h1 id="tableLabel">Persons</h1>
+
+<p *ngIf="!persons"><em>Loading...</em></p>
+
+<form class='form mt-5' *ngIf="persons" (ngSubmit)="onSubmit()">
+  <h4>Add Person</h4>
+  <div class="form-group required">
+    <label for="inputFirstName" class="control-label">First Name:</label>
+    <input type="text" class="form-control" id="inputFirstName" name="firstName" [(ngModel)]="firstName" aria-describedby="firstName" placeholder="Enter first name">
+  </div>
+  <div class="form-group">
+    <label for="inputOtherNames" class="control-label">Other Names:</label>
+    <input type="text" class="form-control" id="inputOtherNames" name="otherNames" [(ngModel)]="otherNames" aria-describedby="otherNames" placeholder="Enter other names">
+  </div>
+  <div class="form-group required">
+    <label for="inputLastName" class="control-label">Last Name:</label>
+    <input type="text" class="form-control" id="inputLastName" name="lastName" [(ngModel)]="lastName" aria-describedby="lastName" placeholder="Enter last name">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<table class='table table-striped mt-5' aria-labelledby="tableLabel" *ngIf="persons">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Other Names</th>
+      <th>Last Name</th>
+      <th>Amount Loaned to Others (EUR)</th>
+      <th>Amount Loaned from Others (EUR)</th>
+      <th>Total (EUR)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons">
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.otherNames }}</td>
+      <td>{{ person.lastName }}</td>
+      <td>{{ person.amountLoanedToOthers }}</td>
+      <td>{{ person.amountLoanedFromOthers }}</td>
+      <td>{{ person.total }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,52 @@
+<h1 id="tableLabel">Operations</h1>
+
+<p *ngIf="!operations"><em>Loading...</em></p>
+
+<form class='form mt-5' *ngIf="operations" (ngSubmit)="onSubmit()">
+  <h4>Add Operation</h4>
+  <div class="form-group required">
+    <label for="inputPersonFrom" class="control-label">From:</label>
+    <select class="form-control" id="inputPersonFrom" name="personFromId" [(ngModel)]="personFromId" aria-describedby="inputPersonFrom">
+      <option value="-1" disabled>Choose person</option>
+      <option *ngFor="let personFrom of personsFrom" [ngValue]="personFrom.id">{{ personFrom.firstName + " " + personFrom.lastName }}</option>
+    </select>
+  </div>
+  <div class="form-group required">
+    <label for="inputOperationType" class="control-label">Operation:</label>
+    <select class="form-control" id="inputOperationType" name="operationTypeId" [(ngModel)]="operationTypeId" aria-describedby="operationType">
+      <option value="-1" disabled>Choose operation type</option>
+      <option *ngFor="let operationType of operationTypes" [ngValue]="operationType.id">{{ operationType.name }}</option>
+    </select>
+  </div>
+  <div class="form-group required">
+    <label for="inputAmount" class="control-label">Amount (EUR):</label>
+    <input type="number" class="form-control" id="inputAmount" name="amount" [(ngModel)]="amount" aria-describedby="amount" placeholder="Enter amount (EUR)">
+  </div>
+  <div class="form-group required">
+    <label for="inputPersonTo" class="control-label">To:</label>
+    <select class="form-control" id="inputPersonTo" name="personToId" [(ngModel)]="personToId" aria-describedby="inputPersonTo">
+      <option value="-1" disabled>Choose person</option>
+      <option *ngFor="let personTo of personsTo" [ngValue]="personTo.id">{{ personTo.firstName + " " + personTo.lastName }}</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<table class='table table-striped mt-5' aria-labelledby="tableLabel" *ngIf="operations">
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>Operation</th>
+      <th>Amount (EUR)</th>
+      <th>To</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let operation of operations">
+      <td>{{ operation.personFromFullName }}</td>
+      <td>{{ operation.operationTypeName }}</td>
+      <td>{{ operation.amount | number : '1.2-2' }}</td>
+      <td>{{ operation.personToFullName }}</td>
+    </tr>
+  </tbody>
+</table>
