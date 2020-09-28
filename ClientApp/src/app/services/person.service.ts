@@ -18,10 +18,12 @@ export class PersonService {
 
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) { }
 
+  // Get person details list from database
   getPersons(): Observable<PersonDetails[]> {
     return this.http.get<PersonDetails[]>(this.baseUrl + 'person');
   }
 
+  // Save person data to database
   postPerson(person: Person): Observable<any> {
     return this.http.post<any>(this.baseUrl + 'person', person, httpOptions);
   }

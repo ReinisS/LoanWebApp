@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
-using static LoanWebApp.Models.OperationType;
 
 namespace LoanWebApp.Models
 {
+    /// <summary>
+    /// Class for operations (loan or repayment)
+    /// </summary>
     public class Operation
     {
         public int Id { get; set; }

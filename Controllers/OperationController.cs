@@ -21,6 +21,10 @@ namespace LoanWebApp.Controllers
             _appDbContext = appDbContext;
         }
 
+        /// <summary>
+        /// Gets operation data for list view
+        /// </summary>
+        /// <returns>List of operation data</returns>
         [HttpGet]
         public IEnumerable<OperationGetDto> GetOperations()
         {
@@ -35,6 +39,10 @@ namespace LoanWebApp.Controllers
             ).ToList();
         }
 
+        /// <summary>
+        /// Saves an operation to database
+        /// </summary>
+        /// <param name="operation">POST operation data</param>
         [HttpPost]
         [Consumes("application/json")]
         public void PostOperation([FromBody] OperationPostDto operation)

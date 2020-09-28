@@ -3,6 +3,9 @@ using static LoanWebApp.Models.OperationType;
 
 namespace LoanWebApp.DataAccess
 {
+    /// <summary>
+    /// Data for initial data import
+    /// </summary>
     public static class InitialDbData
     {
         public static Person[] InitialPersonList = new Person[5]

@@ -18,6 +18,10 @@ namespace LoanWebApp.Controllers
             _appDbContext = appDbContext;
         }
 
+        /// <summary>
+        /// Gets operation types for classifier
+        /// </summary>
+        /// <returns>Operation type list</returns>
         [HttpGet]
         public IEnumerable<OperationType> GetOperationTypes()
         {

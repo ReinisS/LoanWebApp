@@ -1,5 +1,8 @@
 namespace LoanWebApp.DerivedModels
 {
+    /// <summary>
+    /// Class for operation list view
+    /// </summary>
     public class OperationGetDto
     {
         public int Id { get; set; }
@@ -13,6 +16,9 @@ namespace LoanWebApp.DerivedModels
         public string PersonToFullName { get; set; }
     }
 
+    /// <summary>
+    /// Class for incoming POST Operation requests
+    /// </summary>
     public class OperationPostDto
     {
 

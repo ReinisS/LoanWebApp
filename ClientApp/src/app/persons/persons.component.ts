@@ -36,6 +36,9 @@ export class PersonsComponent implements OnInit {
       otherNames: this.otherNames,
       lastName: this.lastName
     }
-    this.personService.postPerson(person).subscribe(_ => this.getPersons());
+    this.personService.postPerson(person).subscribe(_ =>
+      // Reload person list from database after POST
+      this.getPersons()
+    );
   }
 }

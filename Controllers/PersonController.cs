@@ -20,6 +20,10 @@ namespace LoanWebApp.Controllers
             _appDbContext = appDbContext;
         }
 
+        /// <summary>
+        /// Gets person details list for person list view
+        /// </summary>
+        /// <returns>Person details list</returns>
         [HttpGet]
         public IEnumerable<PersonDetails> GetPersons()
         {

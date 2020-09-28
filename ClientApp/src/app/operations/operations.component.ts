@@ -51,6 +51,9 @@ export class OperationsComponent implements OnInit {
       amount: this.amount,
       personToId: this.personToId
     }
-    this.operationService.postOperation(operation).subscribe(_ => this.getOperations());
+    this.operationService.postOperation(operation).subscribe(_ =>
+      // Reload operation list from database after POST
+      this.getOperations()
+    );
   }
 }
