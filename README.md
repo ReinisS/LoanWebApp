@@ -2,9 +2,28 @@
 
 ## Introduction
 
-TODO
+LoanWebApp is a full-stack Web app which lets the user register persons and operations
+(loans and repayments) between the registered persons.
+
+Tech stack:
+
+* Angular (version 8)
+
+* .NET Core (3.1)
+
+* SQLite
+
+LoanWebApp is built using the .NET Core Angular template (`dotnet new angular -f netcoreapp3.1`).
+
+A SQLite database file `app.db` has been included which already has 5 persons and 20 operations added to it.
+
+The image below shows the ER diagram of the database:
 
 ![ER Diagram](assets/LoanWebAppERDiagram.png)
+
+Entity Framework Core is used in this project using the "code-first" approach, meaning the entity
+C# classes were created first, and the database tables are generated from them. An initial database
+migration is included in the `Migrations` folder.
 
 ## Building and running the project
 
