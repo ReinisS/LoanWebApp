@@ -46,8 +46,8 @@ Alternatively, if you're using VS Code, you can run the project from the VS Code
 
 Person page:
 
-![ER Diagram](assets/PersonsPage.png)
+![Person page](assets/PersonsPage.png)
 
 Operation page:
 
-![ER Diagram](assets/OperationsPage.png)
+![Operation page](assets/OperationsPage.png)
