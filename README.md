@@ -21,7 +21,7 @@ The image below shows the ER diagram of the database:
 
 ![ER Diagram](assets/LoanWebAppERDiagram.png)
 
-Entity Framework Core is used in this project using the "code-first" approach, meaning the entity
+Entity Framework Core is used in this project using the "code first" approach, meaning the entity
 C# classes were created first, and the database tables are generated from them. An initial database
 migration is included in the `Migrations` folder.
 
@@ -38,3 +38,6 @@ from the ClientApp folder). If the application builds and runs successfully,
 you should be able to access the app from the browser at <https://localhost:5001/>
 
 To stop the application, input Ctrl+C in the console where you ran the project from.
+
+Alternatively, if you're using VS Code, you can run the project from the VS Code 'Run' tab. The necessary
+`.vscode/launch.json` file has been included.
