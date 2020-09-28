@@ -36,17 +36,17 @@ namespace LoanWebApp.Controllers
                 AmountLoanedToOthers =
                     _appDbContext.Operation
                         .Where(o => o.OperationType.Id == OperationTypeId.Loan && o.PersonFrom == p)
-                        .Sum(o => o.Amount) -
+                        .Sum(o => (decimal?) o.Amount) ?? 0 -
                     _appDbContext.Operation
                         .Where(o => o.OperationType.Id == OperationTypeId.Repayment && o.PersonTo == p)
-                        .Sum(o => o.Amount),
+                        .Sum(o => (decimal?) o.Amount) ?? 0,
                 AmountLoanedFromOthers =
                     _appDbContext.Operation
                         .Where(o => o.OperationType.Id == OperationTypeId.Loan && o.PersonTo == p)
-                        .Sum(o => o.Amount) -
+                        .Sum(o => (decimal?) o.Amount) ?? 0 -
                     _appDbContext.Operation
                         .Where(o => o.OperationType.Id == OperationTypeId.Repayment && o.PersonFrom == p)
-                        .Sum(o => o.Amount)
+                        .Sum(o => (decimal?) o.Amount) ?? 0
             }).ToList();
         }
 
