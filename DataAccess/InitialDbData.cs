@@ -98,14 +98,14 @@ namespace LoanWebApp.DataAccess
             {
                 Id = 7,
                 OperationTypeId = OperationTypeId.Repayment,
-                Amount = 20.00m,
+                Amount = 2.00m,
                 PersonFromId = InitialDbData.InitialPersonList[2].Id,
                 PersonToId = InitialDbData.InitialPersonList[1].Id
             },
             new
             {
                 Id = 8,
-                OperationTypeId = OperationTypeId.Repayment,
+                OperationTypeId = OperationTypeId.Loan,
                 Amount = 5.00m,
                 PersonFromId = InitialDbData.InitialPersonList[2].Id,
                 PersonToId = InitialDbData.InitialPersonList[3].Id

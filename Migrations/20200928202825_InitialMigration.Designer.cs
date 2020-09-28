@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LoanWebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200927210423_InitialMigration")]
+    [Migration("20200928202825_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,7 +97,7 @@ namespace LoanWebApp.Migrations
                         new
                         {
                             Id = 7,
-                            Amount = 20.0,
+                            Amount = 2.0,
                             OperationTypeId = 1,
                             PersonFromId = 3,
                             PersonToId = 2
@@ -106,7 +106,7 @@ namespace LoanWebApp.Migrations
                         {
                             Id = 8,
                             Amount = 5.0,
-                            OperationTypeId = 1,
+                            OperationTypeId = 0,
                             PersonFromId = 3,
                             PersonToId = 4
                         },

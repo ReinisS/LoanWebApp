@@ -160,12 +160,12 @@ namespace LoanWebApp.Migrations
             migrationBuilder.InsertData(
                 table: "Operation",
                 columns: new[] { "Id", "Amount", "OperationTypeId", "PersonFromId", "PersonToId" },
-                values: new object[] { 8, 5.0, 1, 3, 4 });
+                values: new object[] { 8, 5.0, 0, 3, 4 });
 
             migrationBuilder.InsertData(
                 table: "Operation",
                 columns: new[] { "Id", "Amount", "OperationTypeId", "PersonFromId", "PersonToId" },
-                values: new object[] { 7, 20.0, 1, 3, 2 });
+                values: new object[] { 7, 2.0, 1, 3, 2 });
 
             migrationBuilder.InsertData(
                 table: "Operation",
