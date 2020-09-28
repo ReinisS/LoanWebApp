@@ -41,3 +41,13 @@ To stop the application, input Ctrl+C in the console where you ran the project f
 
 Alternatively, if you're using VS Code, you can run the project from the VS Code 'Run' tab. The necessary
 `.vscode/launch.json` file has been included.
+
+## Screenshots
+
+Person page:
+
+![ER Diagram](assets/PersonsPage.png)
+
+Operation page:
+
+![ER Diagram](assets/OperationsPage.png)
